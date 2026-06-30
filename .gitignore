@@ -1,5 +1,38 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
+﻿# Build results
+bin/
+obj/
 
-/.vs/LeetCode
+# Visual Studio
+.vs/
+
+# Rider
+.idea/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Debug/Release folders
+Debug/
+Release/
+
+# Logs
+*.log
+
+# Test results
+TestResults/
+
+# NuGet packages (if applicable)
+packages/
+
+# Publish output
+publish/
+
+# Generated files
+Generated/
+
+# OS files
+.DS_Store
+Thumbs.db
