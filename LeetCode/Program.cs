@@ -3,19 +3,31 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mime;
+using System.Reflection.Emit;
 using System.Text;
 
 public class Solution
 {
     public static void Main(string[] args)
     {
-        string message = "my name is abdelrahamn";
-        var code = Encoding.UTF8.GetBytes(message);
-       string Encode = Convert.ToBase64String(code);
-        Console.WriteLine( Encode);
-        var decode = Convert.FromBase64String(Encode);
-        string newMessage=Encoding.UTF8.GetString(decode);
-        Console.WriteLine( newMessage);
+        //MyReflection myRef= new MyReflection();
+        //myRef.getInfo(typeof( PropertyBuilder));
+        //Type type = typeof(PropertyBuilder);
+        //MyInfo info = new MyInfo(type.Name,type.IsClass,type.Assembly.FullName,type.Namespace);
+        //Console.WriteLine("Name :" +info.name);
+        //Console.WriteLine("Is Class :" +info.isClass);
+        //Console.WriteLine("Assemply Name:" +info.assemblyName);
+        //Console.WriteLine("Name Space:" +info.nameSpace);
+        MyReflection myRef = new MyReflection();
+       //Console.WriteLine( myRef.getStringMethods());
+        myRef.callPropertiesAndMethodsAtRunTime("software Engineer");
+       // string message = "my name is abdelrahamn";
+       // var code = Encoding.UTF8.GetBytes(message);
+       //string Encode = Convert.ToBase64String(code);
+       // Console.WriteLine( Encode);
+       // var decode = Convert.FromBase64String(Encode);
+       // string newMessage=Encoding.UTF8.GetString(decode);
+       // Console.WriteLine( newMessage);
 
         //Console.WriteLine(Day1.Reverse(123));
     } }
